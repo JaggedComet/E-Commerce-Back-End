@@ -7,20 +7,20 @@ router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
   Category.findAll({
-    include: [{model: Product}]
+    include: [{ model: Product }]
   })
-  .then(categoryData =>
-    res.json(categoryData))
+    .then(categoryData =>
+      res.json(categoryData))
 });
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   Category.findByPk(req.params.id, {
-    include: [{ model: Product}]
+    include: [{ model: Product }]
   })
-  .then(categoryPKData =>
-    res.json(categoryPKData))
+    .then(categoryPKData =>
+      res.json(categoryPKData))
 });
 
 router.post('/', (req, res) => {
@@ -28,20 +28,24 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-  .then(newCategory =>
-    res.json(newCategory))
+    .then(newCategory =>
+      res.json(newCategory))
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update(req.body, {
-    where: {
-      category_name: req.body.id
-    }
-  })
-  .then(updateCategory =>
-    res.json(updateCategory))
-});
+  Category.update(
+    {
+      category_name: req.body.category_name
+    },
+    {
+      where: {
+        id: req.params.id,
+      }
+    })
+    .then(updateCategory =>
+      res.json(updateCategory))
+})
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
