@@ -6,7 +6,10 @@ This project aims to use MYSQL along with Sequelize in order to make a back-end 
 
 ## [Try it yourself!](https://github.com/JaggedComet/E-Commerce-Back-End.git)
 
-![gif](./assets/images/demo.gif)
+![gif](./assets/images/demo.gif)<br>
+
+Link to video<br>
+https://watch.screencastify.com/v/H6H60XQncXXNm3OWaUJD
 
 ## Installation
 
