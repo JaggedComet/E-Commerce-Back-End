@@ -24,7 +24,9 @@ To use the application, you would need to run ```npm i``` on the commandline in 
 - MySQL2<br>
 - Sequelize<br>
 - Dotenv<br>
-- Express
+- Express<br>
+- Insomnia<br>
+- VSCode
 
 ## Credits
 
